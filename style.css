@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'score';
+  src: url('/pong-score.ttf');
+}
+@font-face {
+  font-family: 'text';
+  src: url('/pong-text.ttf');
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  font-family: 'text';
+
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
