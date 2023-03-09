@@ -7,7 +7,7 @@ const BALL_RADIUS = 3;
 const PADDLE_WIDTH = 3;
 const PADDLE_HEIGHT = 18;
 const PADDLE_SPEED = 3;
-const PADDLE_HIT_ZONES = {TOP: 0,CENTER: 1,BOTTOM: 2};
+const PADDLE_HIT_ZONES = { TOP: 0, CENTER: 1, BOTTOM: 2 };
 
 const TITLE_FONT = "30px text";
 const SUBTITLE_FONT = "10px text";
@@ -44,10 +44,7 @@ window.onload = function () {
 };
 
 function startGame(e) {
-  console.log("key pressed.");
-  //if spacebar
   if (e.keyCode === 32) {
-    console.log("spacebar detected.");
     document.removeEventListener("keydown", startGame);
     document.addEventListener("keydown", keyDownHandler);
     document.addEventListener("keyup", keyUpHandler);
@@ -94,7 +91,6 @@ function runGame() {
 function drawObjects() {
   //draw ball
   context.beginPath();
-  //context.arc(ball.x, ball.y, BALL_RADIUS, 0, Math.PI * 2);
   context.rect(ball.x, ball.y, BALL_RADIUS, BALL_RADIUS);
   context.fill();
   context.closePath();
@@ -134,14 +130,12 @@ function checkBallCollisions() {
       scoreSound.play();
       player1.score++;
       collisionDetected = true;
-      console.log("scored p1");
       resetBall();
     }
     else if (ball.x < 0) {
       scoreSound.play();
       player2.score++;
       collisionDetected = true;
-      console.log("scored p2");
       resetBall();
     }
 
@@ -181,24 +175,20 @@ function checkPaddleCollision(paddle, ball) {
       //ball.speedY = -ball.speedY;
       ball.speedY = -1.7;
       ball.speedX = -ball.speedX;
-      console.log("up");
       break;
     case PADDLE_HIT_ZONES.CENTER:
       // if condition prevents from getting stuck in y position
-      if (ball.speedY == 0){
+      if (ball.speedY == 0) {
         ball.speedY = -1.7;
       } else {
         ball.speedY = 0;
       }
       ball.speedX = -ball.speedX;
-      console.log("middle");
       break;
     case PADDLE_HIT_ZONES.BOTTOM:
       //ball.speedY = -ball.speedY;
       ball.speedY = -1.7;
       ball.speedX = -ball.speedX;
-      console.log("down");
-
       break;
   }
 
@@ -281,7 +271,6 @@ function resetBall() {
   //ball spawns at random height
   ball.y = Math.floor(Math.random() * canvas.height);
   ball.speedX = -ball.speedX;
-  
 }
 
 function resetGame() {
@@ -308,4 +297,3 @@ function resetGame() {
   resetBall();
   requestAnimationFrame(runGame);
 }
-
