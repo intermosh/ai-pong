@@ -7,6 +7,7 @@ This is a PONG game created with Artificial Intelligence (ChatGPT3)
 ## Initial Prompt
 
 > "Give me the code in HTML, CSS and JS of a Pong".
+>
 This was the first version it made (I've corrected a few minor errors in the resulting code):
 
 HTML
