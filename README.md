@@ -195,7 +195,8 @@ The resulting game was a very primitive and basic idea:
 * Reset screen
 * Prevent paddles going off canvas
 * Sound
-* Graphics retro-style
+* Graphical style
+* Collisions fix
 * Smooth movement
 * Check paddle hit zone
 * Bug fixes and optimization
