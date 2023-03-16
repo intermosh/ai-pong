@@ -188,3 +188,14 @@ function keyUpHandler(e) {
 The resulting game was a very primitive and basic idea:
 
 ![First version of AI Pong](https://raw.githubusercontent.com/intermosh/ai-pong/main/pong1.gif)
+
+## Adding New Features (TBD)
+
+* Start screen
+* Reset screen
+* Prevent paddles going off canvas
+* Sound
+* Graphics retro-style
+* Smooth movement
+* Check paddle hit zone
+* Bug fixes and optimization
